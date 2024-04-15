@@ -68,4 +68,22 @@ Table 1: CSV Format
 
 ### Arquitetura
 
-Consideramos que os sensores podem enviar dados para a API de duas formas: via HTTP ou via MQTT.
+- Foi desenvolvida uma solução baseada em microserviços
+- Existem 2 endpoints para entrada de dados de sensores, um para MQTT e outro para HTTP
+- O pipeline de dados é isolado das APIs do cliente
+- Utilizamos Apache Kafka para garantir a escalabilidade e a tolerância a falhas do pipeline de dados
+- Foi utilizado InfluxDB para armazenar os dados dos sensores por ser um banco de dados de series temporais com o modelo definido para o problema
+- Foi utilizado MongoDB para armazenar os dados estáticos dos sensores
+- Foi utilizado FastAPI para criar as APIs do cliente
+
+### Como rodar o projeto
+
+- Clone o repositório
+- Execute `docker-compose up` na raiz do projeto
+- Configure o Clerk com as variáveis de ambiente
+- Configure o Mosquitto rodando o script `setup_mosquitto.sh`.
+- Uma vez o mosquitto configurado, pode utilzar o script `dummy_producer.py` para enviar dados via MQTT ao broker
+- No `localhost:8090` é possível acessar o painel do UI for Apache Kafka
+- Acesse ao painel do InfluxDB em `localhost:8086` com as credenciais do .env, crie o bucket `measures` e copie o token para o .env
+- Acesse a pasta `frontend` e execute `npm install` e `npm run dev`
+- A API do cliente (FastAPI) estará disponível em `localhost:9010`. Acesse a documentação em `localhost:9010/docs` para testar as APIs de extração de dados dos sensores e do arquivo CSV

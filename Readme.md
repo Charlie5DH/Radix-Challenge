@@ -76,29 +76,59 @@ A solução foi chamada de PipeWatcher.
 
 - Foi desenvolvida uma solução baseada em microserviços
 - Existem 2 endpoints para entrada de dados de sensores, um para MQTT e outro para HTTP
-- O pipeline de dados é isolado das APIs do cliente
-- Utilizamos Apache Kafka para garantir a escalabilidade e a tolerância a falhas do pipeline de dados
-- Foi utilizado InfluxDB para armazenar os dados dos sensores por ser um banco de dados de series temporais com o modelo definido para o problema
+- Foi utilizado Apache Kafka para garantir a escalabilidade e a tolerância a falhas do pipeline de dados
+- Foi utilizado InfluxDB para armazenar os dados dos sensores por ser um banco de dados de series temporais altamente otimizado
 - Foi utilizado MongoDB para armazenar os dados estáticos dos sensores
 - Foi utilizado FastAPI para criar as APIs do cliente
 
 ### Fluxo de Dados
 
-Os dados podem entrar na plataforma através de MQTT ou HTTP. MQTT é comumente utilizado por dispositivos IoT. Um serviço FastAPI atua como gateway para as solicitações HTTP e como consumidor do Mosquitto. Este serviço é responsável por validar o formato da mensagem e enviá-la ao broker Kafka. O broker Kafka é encarregado de distribuir as mensagens aos consumidores. Kafka é altamente escalável e tolerante a falhas, tornando-o ideal para pipelines de dados de streaming de IoT. Existem outros dois serviços Python: um é responsável por armazenar os dados no InfluxDB, enquanto o outro verifica constantemente se há novos sensores no fluxo; caso haja um novo sensor, ele será armazenado no banco de dados MongoDB. Há também um terceiro serviço, neste caso, um serviço FastAPI que funciona como API cliente. Ele é responsável por extrair os dados dos bancos de dados (Influx e Mongo) e servi-los ao front-end. Isso é necessário porque o front-end não pode acessar diretamente o banco de dados InfluxDB.
+**Entrada de dados:**
 
-O front-end é um aplicativo Next.js que utiliza Clerk para autenticação. Você precisa se autenticar para acessar o painel. O próximo diagrama mostra o fluxo de dados na plataforma.
+- Os dados podem entrar na plataforma por meio de dois protocolos: MQTT ou HTTP.
+- MQTT é comumente utilizado por dispositivos IoT para enviar dados em tempo real.
+- Um serviço FastAPI atua como gateway para as solicitações HTTP e também como consumidor do Mosquitto (broker MQTT).
+- O serviço FastAPI valida o formato da mensagem e a envia ao broker Kafka.
+
+**Processamento de dados:**
+
+- O Kafka é responsável por distribuir as mensagens aos consumidores.
+- Kafka é altamente escalável e tolerante a falhas, tornando-o ideal para pipelines de dados de streaming de IoT.
+
+**Serviços em Python**
+
+- Existem dois serviços Python
+  - Um deles armazena os dados no InfluxDB, um banco de dados de séries temporais otimizado para armazenar dados de sensores.
+  - O outro serviço verifica constantemente se há novos sensores no fluxo.
+  - Se um novo sensor for detectado, ele será armazenado no banco de dados MongoDB.
+
+**API Cliente (FastAPI):**
+
+- Um terceiro serviço, um FastAPI, funciona como API cliente isolado do pipeline de dados.
+- Ele extrai os dados dos bancos de dados (InfluxDB e MongoDB) e os serve ao front-end.
+- Isso é necessário porque o front-end não pode acessar diretamente o banco de dados InfluxDB.
+
+**Front-end (Next.js):**
+
+- O aplicativo front-end é construído com Next.js.
+- Utiliza Clerk para autenticação.
+- O front-end exibe os dados processados e históricos de uso dos equipamentos.
 
 ![Site](frontend/public/assets/diagram.png)
+
+Para expandir a solução globalmente, seria necessário adicionar alguns componentes como load balancers para os serviços encarregados do consumo de dados, evitando bottlenecks. Além disso, teriamos que replicar a infraestura em data centers das diferentes regiões para garantir a disponibilidade e a latência baixa para os usuários.
+
+![Site](frontend/public/assets/global.png)
 
 ### Como rodar o projeto
 
 - Clone o repositório
-- Execute `docker-compose up` na raiz do projeto
-- Configure o Clerk com as variáveis de ambiente
-- Configure o Mosquitto rodando o arquivo `mosquitto\setup_mosquitto.sh` para criar um usuário e senha
-- Uma vez o mosquitto configurado, pode utilzar o script `dummy_producer.py` para enviar dados via MQTT ao broker
+- Execute `docker-compose up` na raiz do projeto ou utilize os arquivos `deploy.sh` e `start.sh`
+- Configure o Mosquitto rodando o arquivo `mosquitto\setup_mosquitto.sh` para criar um usuário e senha (radix:123456789)
+- Uma vez o mosquitto configurado, pode utilzar o script `mosquitto\dummy_producer.py` para enviar dados via MQTT ao broker
 - No `localhost:8090` é possível acessar o painel do UI for Apache Kafka
 - Acesse ao painel do InfluxDB em `localhost:8086` com as credenciais do .env, crie o bucket `measures` e copie o token para o .env
-- Acesse a pasta `frontend` e execute `npm install` e `npm run dev`
 - A API do cliente (FastAPI) estará disponível em `localhost:9010`. Acesse a documentação em `localhost:9010/docs` para testar as APIs de extração de dados dos sensores e do arquivo CSV
-- Acesse o front-end em `localhost:3000`
+- Acesse a pasta `frontend` e execute `npm install` e `npm run dev` para rodar o front-end (falta de tempo para configurar o Dockerfile)
+- Edite o .env do front-end adicionando as variáveis de ambiente do Clerk (Precisa de uma conta no Clerk para configurar)
+- Acesse o front-end em `localhost:3000`.

@@ -1,0 +1,5 @@
+confluent_kafka
+requests
+python-dateutil
+pymongo
+pydantic

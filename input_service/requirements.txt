@@ -1,0 +1,12 @@
+fastapi==0.78.0
+uvicorn
+websockets
+confluent_kafka
+requests
+paho-mqtt
+influxdb_client
+pymongo==3.12.2
+motor==2.5.1
+python-dateutil==2.8.2
+pandas
+datetime

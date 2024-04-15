@@ -1,0 +1,852 @@
+1712954102: mosquitto version 2.0.15 starting
+1712954102: Config loaded from /mosquitto/config/mosquitto.conf.
+1712954102: Error: Unable to open pwfile "/mosquitto/config/password.txt # File containing username and password".
+1712954102: Error opening password file "/mosquitto/config/password.txt # File containing username and password".
+1712954652: mosquitto version 2.0.15 starting
+1712954652: Config loaded from /mosquitto/config/mosquitto.conf.
+1712954652: Error: Unable to open pwfile "/mosquitto/config/password.txt # File containing username and password".
+1712954652: Error opening password file "/mosquitto/config/password.txt # File containing username and password".
+1712954809: mosquitto version 2.0.15 starting
+1712954809: Config loaded from /mosquitto/config/mosquitto.conf.
+1712954809: Error: Unable to open pwfile "/mosquitto/config/password.txt # File containing username and password".
+1712954809: Error opening password file "/mosquitto/config/password.txt # File containing username and password".
+1712954833: mosquitto version 2.0.15 starting
+1712954833: Config loaded from /mosquitto/config/mosquitto.conf.
+1712954833: Error: Unable to open pwfile "/password.txt".
+1712954833: Error opening password file "/password.txt".
+1712954850: mosquitto version 2.0.15 starting
+1712954850: Config loaded from /mosquitto/config/mosquitto.conf.
+1712954850: Error: Invalid password hash type for user radix, removing entry.
+1712954850: Opening ipv4 listen socket on port 1883.
+1712954850: Opening ipv6 listen socket on port 1883.
+1712954850: mosquitto version 2.0.15 running
+1712954867: mosquitto version 2.0.15 terminating
+1712954867: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712954951: mosquitto version 2.0.15 starting
+1712954951: Config loaded from /mosquitto/config/mosquitto.conf.
+1712954951: Error: Invalid password hash type for user radix, removing entry.
+1712954951: Opening ipv4 listen socket on port 1883.
+1712954951: Opening ipv6 listen socket on port 1883.
+1712954951: mosquitto version 2.0.15 running
+1712955370: New connection from 172.25.0.1:60424 on port 1883.
+1712955370: Client auto-C154A6F6-8C88-1F6E-9C81-1E1D476A30EF disconnected, not authorised.
+1712955490: New connection from 172.25.0.1:60544 on port 1883.
+1712955490: Client auto-3E1C588D-06FD-64AD-4441-27C5AC32FB05 disconnected, not authorised.
+1712955501: New connection from 172.25.0.1:60558 on port 1883.
+1712955501: Client auto-567C4A75-9912-8800-77A9-48AB7DF2D173 disconnected, not authorised.
+1712955504: New connection from 172.25.0.1:60566 on port 1883.
+1712955504: Client auto-4F120907-F813-5A39-DAAE-95FD49B70FDF disconnected, not authorised.
+1712955506: New connection from 172.25.0.1:60570 on port 1883.
+1712955506: Client auto-7AFFA6CF-5A6B-6DF6-938E-1BB64644DCEE disconnected, not authorised.
+1712955535: New connection from 172.25.0.1:60604 on port 1883.
+1712955535: Client auto-E183BAE3-F35B-416D-9D93-789B11D63799 disconnected, not authorised.
+1712955618: New connection from 172.25.0.1:60688 on port 1883.
+1712955618: Client auto-07982891-7A02-C560-92C5-80C8E9CE3882 disconnected, not authorised.
+1712955622: New connection from 172.25.0.1:60698 on port 1883.
+1712955622: Client auto-16AFA2ED-9E9F-48E4-13F3-C3F91F744D62 disconnected, not authorised.
+1712955755: New connection from 172.25.0.1:60832 on port 1883.
+1712955755: Client auto-EB383A38-9A2E-2C95-A753-C7AF301537D0 disconnected, not authorised.
+1712955820: New connection from 172.25.0.1:60900 on port 1883.
+1712955820: Client auto-02CA9881-630B-557E-E523-FFE759EB5433 disconnected, not authorised.
+1712956165: New connection from 172.25.0.1:33010 on port 1883.
+1712956165: Client auto-0A97FDCF-DEF2-9D60-81E5-0CCB4E16647E disconnected, not authorised.
+1712956238: New connection from 172.25.0.1:33084 on port 1883.
+1712956238: Client auto-85985D72-A765-DD8E-D62A-7C314BC50555 disconnected, not authorised.
+1712956246: New connection from 172.25.0.1:33098 on port 1883.
+1712956246: Client auto-460772CC-BC6B-4D96-2DB4-96526E3B366E disconnected, not authorised.
+1712956345: New connection from 172.25.0.1:33196 on port 1883.
+1712956345: Client auto-1C1F9C1B-85E1-5DCF-6067-A8DCC8B0E401 disconnected, not authorised.
+1712956424: New connection from 172.25.0.1:33280 on port 1883.
+1712956424: Client auto-A9AD8590-1C9C-6FD2-13C3-0C2DC5AFB614 disconnected, not authorised.
+1712956526: New connection from 172.25.0.1:33384 on port 1883.
+1712956526: Client auto-7A77785F-4DC9-AB65-0E95-377700261868 disconnected, not authorised.
+1712956739: New connection from 172.25.0.1:33594 on port 1883.
+1712956740: Client <unknown> closed its connection.
+1712956740: New connection from 172.25.0.1:33598 on port 1883.
+1712956740: Client dummy_producer disconnected, not authorised.
+1712956751: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712956887: New connection from 172.25.0.1:33748 on port 1883.
+1712956887: Client <unknown> closed its connection.
+1712956913: New connection from 172.25.0.1:33776 on port 1883.
+1712956913: Client <unknown> closed its connection.
+1712957065: New connection from 172.25.0.1:33932 on port 1883.
+1712957065: Client <unknown> closed its connection.
+1712957090: New connection from 172.25.0.1:33960 on port 1883.
+1712957091: Client <unknown> closed its connection.
+1712957091: New connection from 172.25.0.1:33964 on port 1883.
+1712957091: Client dummy_producer disconnected, not authorised.
+1712957209: New connection from 172.25.0.1:34084 on port 1883.
+1712957210: Client <unknown> closed its connection.
+1712957210: New connection from 172.25.0.1:34088 on port 1883.
+1712957210: Client dummy_producer disconnected, not authorised.
+1712957234: New connection from 172.25.0.1:34116 on port 1883.
+1712957235: Client <unknown> closed its connection.
+1712957235: New connection from 172.25.0.1:34120 on port 1883.
+1712957235: Client dummy_producer disconnected, not authorised.
+1712957250: New connection from 172.25.0.1:34140 on port 1883.
+1712957251: Client <unknown> closed its connection.
+1712957251: New connection from 172.25.0.1:34144 on port 1883.
+1712957251: Client dummy_producer disconnected, not authorised.
+1712957276: New connection from 172.25.0.1:34172 on port 1883.
+1712957277: Client <unknown> closed its connection.
+1712957277: New connection from 172.25.0.1:34176 on port 1883.
+1712957277: Client dummy_producer disconnected, not authorised.
+1712957279: New connection from 172.25.0.1:34186 on port 1883.
+1712957279: Client dummy_producer disconnected, not authorised.
+1712957283: New connection from 172.25.0.1:34194 on port 1883.
+1712957283: Client dummy_producer disconnected, not authorised.
+1712957291: New connection from 172.25.0.1:34204 on port 1883.
+1712957291: Client dummy_producer disconnected, not authorised.
+1712957346: New connection from 172.25.0.1:34262 on port 1883.
+1712957346: Client <unknown> closed its connection.
+1712957439: New connection from 172.25.0.1:34356 on port 1883.
+1712957440: Client <unknown> closed its connection.
+1712957440: New connection from 172.25.0.1:34362 on port 1883.
+1712957440: Client dummy_producer disconnected, not authorised.
+1712957441: New connection from 172.25.0.1:34366 on port 1883.
+1712957442: Client <unknown> closed its connection.
+1712957442: New connection from 172.25.0.1:34374 on port 1883.
+1712957442: Client dummy_producer disconnected, not authorised.
+1712957443: New connection from 172.25.0.1:34378 on port 1883.
+1712957445: Client <unknown> closed its connection.
+1712957445: New connection from 172.25.0.1:34382 on port 1883.
+1712957446: Client <unknown> closed its connection.
+1712957446: New connection from 172.25.0.1:34386 on port 1883.
+1712957446: Client dummy_producer disconnected, not authorised.
+1712957447: New connection from 172.25.0.1:34394 on port 1883.
+1712957449: Client <unknown> closed its connection.
+1712957449: New connection from 172.25.0.1:34398 on port 1883.
+1712957450: Client <unknown> closed its connection.
+1712957487: New connection from 172.25.0.1:34438 on port 1883.
+1712957488: Client <unknown> closed its connection.
+1712957488: New connection from 172.25.0.1:34442 on port 1883.
+1712957488: Client dummy_producer disconnected, not authorised.
+1712957489: New connection from 172.25.0.1:34450 on port 1883.
+1712957490: Client <unknown> closed its connection.
+1712957490: New connection from 172.25.0.1:34454 on port 1883.
+1712957490: Client dummy_producer disconnected, not authorised.
+1712957491: New connection from 172.25.0.1:34460 on port 1883.
+1712957493: Client <unknown> closed its connection.
+1712957493: New connection from 172.25.0.1:34464 on port 1883.
+1712957494: Client <unknown> closed its connection.
+1712957494: New connection from 172.25.0.1:34472 on port 1883.
+1712957494: Client dummy_producer disconnected, not authorised.
+1712957495: New connection from 172.25.0.1:34476 on port 1883.
+1712957497: Client <unknown> closed its connection.
+1712957497: New connection from 172.25.0.1:34480 on port 1883.
+1712957497: Client <unknown> closed its connection.
+1712957518: New connection from 172.25.0.1:34504 on port 1883.
+1712957519: Client <unknown> closed its connection.
+1712957519: New connection from 172.25.0.1:34508 on port 1883.
+1712957519: Client dummy_producer disconnected, not authorised.
+1712957520: New connection from 172.25.0.1:34516 on port 1883.
+1712957521: Client <unknown> closed its connection.
+1712957521: New connection from 172.25.0.1:34520 on port 1883.
+1712957521: Client dummy_producer disconnected, not authorised.
+1712957522: New connection from 172.25.0.1:34526 on port 1883.
+1712957524: Client <unknown> closed its connection.
+1712957524: New connection from 172.25.0.1:34530 on port 1883.
+1712957525: Client <unknown> closed its connection.
+1712957525: New connection from 172.25.0.1:34538 on port 1883.
+1712957525: Client dummy_producer disconnected, not authorised.
+1712957526: New connection from 172.25.0.1:34542 on port 1883.
+1712957528: Client <unknown> closed its connection.
+1712957528: New connection from 172.25.0.1:34546 on port 1883.
+1712957528: Client <unknown> closed its connection.
+1712957559: New connection from 172.25.0.1:34580 on port 1883.
+1712957560: Client <unknown> closed its connection.
+1712957560: New connection from 172.25.0.1:34584 on port 1883.
+1712957560: Client dummy_producer disconnected, not authorised.
+1712957561: New connection from 172.25.0.1:34592 on port 1883.
+1712957562: Client <unknown> closed its connection.
+1712957562: New connection from 172.25.0.1:34598 on port 1883.
+1712957562: Client dummy_producer disconnected, not authorised.
+1712957563: New connection from 172.25.0.1:34602 on port 1883.
+1712957565: Client <unknown> closed its connection.
+1712957565: New connection from 172.25.0.1:34606 on port 1883.
+1712957566: Client <unknown> closed its connection.
+1712957566: New connection from 172.25.0.1:34614 on port 1883.
+1712957566: Client dummy_producer disconnected, not authorised.
+1712957567: New connection from 172.25.0.1:34618 on port 1883.
+1712957569: Client <unknown> closed its connection.
+1712957569: New connection from 172.25.0.1:34622 on port 1883.
+1712957569: Client <unknown> closed its connection.
+1712957671: New connection from 172.25.0.1:34726 on port 1883.
+1712957672: Client <unknown> closed its connection.
+1712957672: New connection from 172.25.0.1:34730 on port 1883.
+1712957672: Client dummy_producer disconnected, not authorised.
+1712957673: New connection from 172.25.0.1:34740 on port 1883.
+1712957674: Client <unknown> closed its connection.
+1712957674: New connection from 172.25.0.1:34744 on port 1883.
+1712957674: Client dummy_producer disconnected, not authorised.
+1712957675: New connection from 172.25.0.1:34748 on port 1883.
+1712957677: Client <unknown> closed its connection.
+1712957677: New connection from 172.25.0.1:34752 on port 1883.
+1712957678: Client <unknown> closed its connection.
+1712957678: New connection from 172.25.0.1:34756 on port 1883.
+1712957678: Client dummy_producer disconnected, not authorised.
+1712957679: New connection from 172.25.0.1:34764 on port 1883.
+1712957681: Client <unknown> closed its connection.
+1712957681: New connection from 172.25.0.1:34768 on port 1883.
+1712957681: Client <unknown> closed its connection.
+1712957767: New connection from 172.25.0.1:34858 on port 1883.
+1712957767: Client <unknown> closed its connection.
+1712957784: New connection from 172.25.0.1:34878 on port 1883.
+1712957785: Client <unknown> closed its connection.
+1712957785: New connection from 172.25.0.1:34882 on port 1883.
+1712957785: Client dummy_producer disconnected, not authorised.
+1712957786: New connection from 172.25.0.1:34890 on port 1883.
+1712957787: Client <unknown> closed its connection.
+1712957787: New connection from 172.25.0.1:34894 on port 1883.
+1712957787: Client dummy_producer disconnected, not authorised.
+1712957788: New connection from 172.25.0.1:34898 on port 1883.
+1712957788: Client <unknown> closed its connection.
+1712957839: New connection from 172.25.0.1:34950 on port 1883.
+1712957840: Client <unknown> closed its connection.
+1712957840: New connection from 172.25.0.1:34952 on port 1883.
+1712957840: Client dummy_producer disconnected, not authorised.
+1712957841: New connection from 172.25.0.1:34954 on port 1883.
+1712957842: Client <unknown> closed its connection.
+1712957842: New connection from 172.25.0.1:34960 on port 1883.
+1712957842: Client dummy_producer disconnected, not authorised.
+1712957864: New connection from 172.25.0.1:34982 on port 1883.
+1712957865: Client <unknown> closed its connection.
+1712957865: New connection from 172.25.0.1:34986 on port 1883.
+1712957865: Client dummy_producer disconnected, not authorised.
+1712957866: New connection from 172.25.0.1:34988 on port 1883.
+1712957867: Client <unknown> closed its connection.
+1712957867: New connection from 172.25.0.1:34990 on port 1883.
+1712957867: Client dummy_producer disconnected, not authorised.
+1712957868: New connection from 172.25.0.1:34996 on port 1883.
+1712957868: Client <unknown> closed its connection.
+1712957924: New connection from 172.25.0.1:35054 on port 1883.
+1712957925: Client <unknown> closed its connection.
+1712957925: New connection from 172.25.0.1:35060 on port 1883.
+1712957925: Client dummy_producer disconnected, not authorised.
+1712957926: New connection from 172.25.0.1:35064 on port 1883.
+1712957927: Client <unknown> closed its connection.
+1712958315: New connection from 172.25.0.1:35448 on port 1883.
+1712958315: Client dummy disconnected, not authorised.
+1712958364: New connection from 172.25.0.1:35502 on port 1883.
+1712958364: Client dummy disconnected, not authorised.
+1712958433: New connection from 172.25.0.1:35572 on port 1883.
+1712958433: Client dummy disconnected, not authorised.
+1712958434: New connection from 172.25.0.1:35576 on port 1883.
+1712958434: Client dummy disconnected, not authorised.
+1712958436: New connection from 172.25.0.1:35584 on port 1883.
+1712958436: Client dummy disconnected, not authorised.
+1712958459: New connection from 172.25.0.1:35608 on port 1883.
+1712958459: Client dummy disconnected, not authorised.
+1712958461: New connection from 172.25.0.1:35612 on port 1883.
+1712958461: Client dummy disconnected, not authorised.
+1712958463: New connection from 172.25.0.1:35622 on port 1883.
+1712958463: Client dummy disconnected, not authorised.
+1712958496: New connection from 172.25.0.1:35656 on port 1883.
+1712958497: Client <unknown> closed its connection.
+1712958497: New connection from 172.25.0.1:35664 on port 1883.
+1712958497: Client dummy_producer disconnected, not authorised.
+1712958498: New connection from 172.25.0.1:35668 on port 1883.
+1712958499: Client <unknown> closed its connection.
+1712958499: New connection from 172.25.0.1:35672 on port 1883.
+1712958499: Client dummy_producer disconnected, not authorised.
+1712958500: New connection from 172.25.0.1:35676 on port 1883.
+1712958502: Client <unknown> closed its connection.
+1712958502: New connection from 172.25.0.1:35684 on port 1883.
+1712958503: Client <unknown> closed its connection.
+1712958503: New connection from 172.25.0.1:35690 on port 1883.
+1712958503: Client dummy_producer disconnected, not authorised.
+1712958504: New connection from 172.25.0.1:35694 on port 1883.
+1712958505: Client <unknown> closed its connection.
+1712958517: mosquitto version 2.0.15 terminating
+1712958517: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712958586: mosquitto version 2.0.15 starting
+1712958586: Config loaded from /mosquitto/config/mosquitto.conf.
+1712958586: Opening ipv4 listen socket on port 1883.
+1712958586: Opening ipv6 listen socket on port 1883.
+1712958586: mosquitto version 2.0.15 running
+1712958610: New connection from 172.26.0.1:35820 on port 1883.
+1712958611: Client <unknown> closed its connection.
+1712958611: New connection from 172.26.0.1:35826 on port 1883.
+1712958611: New client connected from 172.26.0.1:35826 as dummy_producer (p2, c1, k60, u'radix').
+1712958612: Client dummy_producer closed its connection.
+1712958612: New connection from 172.26.0.1:35832 on port 1883.
+1712958613: Client <unknown> closed its connection.
+1712958613: New connection from 172.26.0.1:35836 on port 1883.
+1712958613: New client connected from 172.26.0.1:35836 as dummy_producer (p2, c1, k60, u'radix').
+1712959028: Client dummy_producer closed its connection.
+1712959037: New connection from 172.26.0.1:36256 on port 1883.
+1712959038: Client <unknown> closed its connection.
+1712959038: New connection from 172.26.0.1:36264 on port 1883.
+1712959038: New client connected from 172.26.0.1:36264 as dummy_producer (p2, c1, k60, u'radix').
+1712959039: Client dummy_producer closed its connection.
+1712959039: New connection from 172.26.0.1:36268 on port 1883.
+1712959040: Client <unknown> closed its connection.
+1712959040: New connection from 172.26.0.1:36272 on port 1883.
+1712959040: New client connected from 172.26.0.1:36272 as dummy_producer (p2, c1, k60, u'radix').
+1712959061: Client dummy_producer disconnected.
+1712959075: New connection from 172.26.0.1:36310 on port 1883.
+1712959076: Client <unknown> closed its connection.
+1712959076: New connection from 172.26.0.1:36314 on port 1883.
+1712959076: Client dummy_producer disconnected, not authorised.
+1712959077: New connection from 172.26.0.1:36320 on port 1883.
+1712959078: Client <unknown> closed its connection.
+1712959078: New connection from 172.26.0.1:36324 on port 1883.
+1712959078: Client dummy_producer disconnected, not authorised.
+1712959079: New connection from 172.26.0.1:36332 on port 1883.
+1712959080: Client <unknown> closed its connection.
+1712959083: New connection from 172.26.0.1:36336 on port 1883.
+1712959084: Client <unknown> closed its connection.
+1712959084: New connection from 172.26.0.1:36344 on port 1883.
+1712959084: New client connected from 172.26.0.1:36344 as dummy_producer (p2, c1, k60, u'radix').
+1712959085: Client dummy_producer closed its connection.
+1712959085: New connection from 172.26.0.1:36348 on port 1883.
+1712959086: Client <unknown> closed its connection.
+1712959086: New connection from 172.26.0.1:36352 on port 1883.
+1712959086: New client connected from 172.26.0.1:36352 as dummy_producer (p2, c1, k60, u'radix').
+1712959559: Client dummy_producer closed its connection.
+1712960386: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712962187: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712962674: New connection from 172.26.0.1:39864 on port 1883.
+1712962675: Client <unknown> closed its connection.
+1712962675: New connection from 172.26.0.1:39868 on port 1883.
+1712962675: New client connected from 172.26.0.1:39868 as dummy_producer (p2, c1, k60, u'radix').
+1712962676: Client dummy_producer closed its connection.
+1712962676: New connection from 172.26.0.1:39872 on port 1883.
+1712962677: Client <unknown> closed its connection.
+1712962677: New connection from 172.26.0.1:39880 on port 1883.
+1712962677: New client connected from 172.26.0.1:39880 as dummy_producer (p2, c1, k60, u'radix').
+1712962685: Client dummy_producer closed its connection.
+1712962692: mosquitto version 2.0.15 terminating
+1712962692: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712962758: mosquitto version 2.0.15 starting
+1712962758: Config loaded from /mosquitto/config/mosquitto.conf.
+1712962758: Opening ipv4 listen socket on port 1883.
+1712962758: Opening ipv6 listen socket on port 1883.
+1712962758: mosquitto version 2.0.15 running
+1712962769: New connection from 172.27.0.1:39960 on port 1883.
+1712962770: Client <unknown> closed its connection.
+1712962770: New connection from 172.27.0.1:39970 on port 1883.
+1712962770: New client connected from 172.27.0.1:39970 as dummy_producer (p2, c1, k60, u'radix').
+1712962771: Client dummy_producer closed its connection.
+1712962771: New connection from 172.27.0.1:39982 on port 1883.
+1712962772: Client <unknown> closed its connection.
+1712962772: New connection from 172.27.0.1:39994 on port 1883.
+1712962772: New client connected from 172.27.0.1:39994 as dummy_producer (p2, c1, k60, u'radix').
+1712962944: New connection from 172.27.0.9:47111 on port 1883.
+1712962944: New client connected from 172.27.0.9:47111 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963040: Client fastapi_sensor_measures has exceeded timeout, disconnecting.
+1712963187: New connection from 172.27.0.9:56067 on port 1883.
+1712963187: New client connected from 172.27.0.9:56067 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963238: Client fastapi_sensor_measures closed its connection.
+1712963240: New connection from 172.27.0.9:47739 on port 1883.
+1712963240: New client connected from 172.27.0.9:47739 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963334: Client fastapi_sensor_measures has exceeded timeout, disconnecting.
+1712963475: New connection from 172.27.0.9:42205 on port 1883.
+1712963475: New client connected from 172.27.0.9:42205 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963497: Client fastapi_sensor_measures closed its connection.
+1712963499: New connection from 172.27.0.9:41347 on port 1883.
+1712963499: New client connected from 172.27.0.9:41347 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963551: Client fastapi_sensor_measures closed its connection.
+1712963553: New connection from 172.27.0.9:36887 on port 1883.
+1712963553: New client connected from 172.27.0.9:36887 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963631: Client fastapi_sensor_measures closed its connection.
+1712963632: New connection from 172.27.0.9:38303 on port 1883.
+1712963632: New client connected from 172.27.0.9:38303 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963771: Client fastapi_sensor_measures closed its connection.
+1712963772: New connection from 172.27.0.9:48097 on port 1883.
+1712963772: New client connected from 172.27.0.9:48097 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963834: Client fastapi_sensor_measures closed its connection.
+1712963835: New connection from 172.27.0.9:51531 on port 1883.
+1712963835: New client connected from 172.27.0.9:51531 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963923: Client fastapi_sensor_measures closed its connection.
+1712963925: New connection from 172.27.0.9:39601 on port 1883.
+1712963925: New client connected from 172.27.0.9:39601 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712963985: Client fastapi_sensor_measures closed its connection.
+1712963986: New connection from 172.27.0.9:51373 on port 1883.
+1712963986: New client connected from 172.27.0.9:51373 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712964153: Client fastapi_sensor_measures closed its connection.
+1712964155: New connection from 172.27.0.9:50321 on port 1883.
+1712964155: New client connected from 172.27.0.9:50321 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712964302: Client fastapi_sensor_measures closed its connection.
+1712964304: New connection from 172.27.0.9:57401 on port 1883.
+1712964304: New client connected from 172.27.0.9:57401 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712964559: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712965545: Client fastapi_sensor_measures closed its connection.
+1712965547: New connection from 172.27.0.9:54975 on port 1883.
+1712965547: New client connected from 172.27.0.9:54975 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965548: Client fastapi_sensor_measures closed its connection.
+1712965549: New connection from 172.27.0.9:34545 on port 1883.
+1712965549: New client connected from 172.27.0.9:34545 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965550: Client fastapi_sensor_measures closed its connection.
+1712965552: New connection from 172.27.0.9:58791 on port 1883.
+1712965552: New client connected from 172.27.0.9:58791 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965553: Client fastapi_sensor_measures closed its connection.
+1712965554: New connection from 172.27.0.9:36173 on port 1883.
+1712965554: New client connected from 172.27.0.9:36173 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965555: Client fastapi_sensor_measures closed its connection.
+1712965557: New connection from 172.27.0.9:60227 on port 1883.
+1712965557: New client connected from 172.27.0.9:60227 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965558: Client fastapi_sensor_measures closed its connection.
+1712965561: New connection from 172.27.0.9:56595 on port 1883.
+1712965561: New client connected from 172.27.0.9:56595 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965562: Client fastapi_sensor_measures closed its connection.
+1712965567: New connection from 172.27.0.9:44089 on port 1883.
+1712965567: New client connected from 172.27.0.9:44089 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965568: Client fastapi_sensor_measures closed its connection.
+1712965575: New connection from 172.27.0.9:50517 on port 1883.
+1712965575: New client connected from 172.27.0.9:50517 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965576: Client fastapi_sensor_measures closed its connection.
+1712965590: New connection from 172.27.0.9:46255 on port 1883.
+1712965590: New client connected from 172.27.0.9:46255 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965591: Client fastapi_sensor_measures closed its connection.
+1712965618: New connection from 172.27.0.9:42467 on port 1883.
+1712965618: New client connected from 172.27.0.9:42467 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712965619: Client fastapi_sensor_measures closed its connection.
+1712965621: New connection from 172.27.0.9:57415 on port 1883.
+1712965621: New client connected from 172.27.0.9:57415 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712966360: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712966859: Client dummy_producer closed its connection.
+1712968161: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712969962: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712971763: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712973161: Client fastapi_sensor_measures closed its connection.
+1712973162: mosquitto version 2.0.15 terminating
+1712973162: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712973231: mosquitto version 2.0.15 starting
+1712973231: Config loaded from /mosquitto/config/mosquitto.conf.
+1712973231: Opening ipv4 listen socket on port 1883.
+1712973231: Opening ipv6 listen socket on port 1883.
+1712973231: mosquitto version 2.0.15 running
+1712973426: mosquitto version 2.0.15 terminating
+1712973426: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712973471: mosquitto version 2.0.15 starting
+1712973471: Config loaded from /mosquitto/config/mosquitto.conf.
+1712973471: Opening ipv4 listen socket on port 1883.
+1712973471: Opening ipv6 listen socket on port 1883.
+1712973471: mosquitto version 2.0.15 running
+1712973618: New connection from 172.29.0.8:40177 on port 1883.
+1712973618: New client connected from 172.29.0.8:40177 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973618: Client fastapi_sensor_measures closed its connection.
+1712973620: New connection from 172.29.0.8:48903 on port 1883.
+1712973620: New client connected from 172.29.0.8:48903 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973621: Client fastapi_sensor_measures closed its connection.
+1712973624: New connection from 172.29.0.8:59487 on port 1883.
+1712973624: New client connected from 172.29.0.8:59487 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973625: Client fastapi_sensor_measures closed its connection.
+1712973626: New connection from 172.29.0.8:38025 on port 1883.
+1712973626: New client connected from 172.29.0.8:38025 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973627: Client fastapi_sensor_measures closed its connection.
+1712973629: New connection from 172.29.0.8:34059 on port 1883.
+1712973629: New client connected from 172.29.0.8:34059 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973630: Client fastapi_sensor_measures closed its connection.
+1712973632: New connection from 172.29.0.8:53987 on port 1883.
+1712973632: New client connected from 172.29.0.8:53987 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973633: Client fastapi_sensor_measures closed its connection.
+1712973637: New connection from 172.29.0.8:59261 on port 1883.
+1712973637: New client connected from 172.29.0.8:59261 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973638: Client fastapi_sensor_measures closed its connection.
+1712973646: New connection from 172.29.0.8:60961 on port 1883.
+1712973646: New client connected from 172.29.0.8:60961 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973646: Client fastapi_sensor_measures closed its connection.
+1712973660: New connection from 172.29.0.8:44533 on port 1883.
+1712973660: New client connected from 172.29.0.8:44533 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712973661: Client fastapi_sensor_measures closed its connection.
+1712973888: New connection from 172.29.0.8:39069 on port 1883.
+1712973888: New client connected from 172.29.0.8:39069 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712974097: Client fastapi_sensor_measures closed its connection.
+1712974098: New connection from 172.29.0.8:54019 on port 1883.
+1712974098: New client connected from 172.29.0.8:54019 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712974341: New connection from 172.29.0.1:51628 on port 1883.
+1712974342: Client <unknown> closed its connection.
+1712974342: New connection from 172.29.0.1:51636 on port 1883.
+1712974342: New client connected from 172.29.0.1:51636 as dummy_producer (p2, c1, k60, u'radix').
+1712974343: Client dummy_producer closed its connection.
+1712974343: New connection from 172.29.0.1:51640 on port 1883.
+1712974344: Client <unknown> closed its connection.
+1712974344: New connection from 172.29.0.1:51646 on port 1883.
+1712974344: New client connected from 172.29.0.1:51646 as dummy_producer (p2, c1, k60, u'radix').
+1712974392: Client dummy_producer closed its connection.
+1712974431: Client fastapi_sensor_measures has exceeded timeout, disconnecting.
+1712974465: New connection from 172.29.0.8:44107 on port 1883.
+1712974465: New client connected from 172.29.0.8:44107 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712975038: Client fastapi_sensor_measures closed its connection.
+1712975039: mosquitto version 2.0.15 terminating
+1712975039: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712975158: mosquitto version 2.0.15 starting
+1712975158: Config loaded from /mosquitto/config/mosquitto.conf.
+1712975158: Opening ipv4 listen socket on port 1883.
+1712975158: Opening ipv6 listen socket on port 1883.
+1712975158: mosquitto version 2.0.15 running
+1712975160: New connection from 172.30.0.8:53999 on port 1883.
+1712975160: New client connected from 172.30.0.8:53999 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712975191: New connection from 172.30.0.1:52512 on port 1883.
+1712975192: Client <unknown> closed its connection.
+1712975192: New connection from 172.30.0.1:52516 on port 1883.
+1712975192: New client connected from 172.30.0.1:52516 as dummy_producer (p2, c1, k60, u'radix').
+1712975193: Client dummy_producer closed its connection.
+1712975193: New connection from 172.30.0.1:52520 on port 1883.
+1712975194: Client <unknown> closed its connection.
+1712975194: New connection from 172.30.0.1:52524 on port 1883.
+1712975194: New client connected from 172.30.0.1:52524 as dummy_producer (p2, c1, k60, u'radix').
+1712975236: Client dummy_producer closed its connection.
+1712975254: Client fastapi_sensor_measures has exceeded timeout, disconnecting.
+1712975285: New connection from 172.30.0.8:44899 on port 1883.
+1712975285: New client connected from 172.30.0.8:44899 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712975297: Client fastapi_sensor_measures closed its connection.
+1712975298: mosquitto version 2.0.15 terminating
+1712975298: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712975318: mosquitto version 2.0.15 starting
+1712975318: Config loaded from /mosquitto/config/mosquitto.conf.
+1712975318: Opening ipv4 listen socket on port 1883.
+1712975318: Opening ipv6 listen socket on port 1883.
+1712975318: mosquitto version 2.0.15 running
+1712975319: New connection from 172.31.0.8:49283 on port 1883.
+1712975319: New client connected from 172.31.0.8:49283 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712975331: New connection from 172.31.0.1:52748 on port 1883.
+1712975332: Client <unknown> closed its connection.
+1712975332: New connection from 172.31.0.1:52764 on port 1883.
+1712975332: New client connected from 172.31.0.1:52764 as dummy_producer (p2, c1, k60, u'radix').
+1712975333: Client dummy_producer closed its connection.
+1712975333: New connection from 172.31.0.1:52768 on port 1883.
+1712975334: Client <unknown> closed its connection.
+1712975334: New connection from 172.31.0.1:52780 on port 1883.
+1712975334: New client connected from 172.31.0.1:52780 as dummy_producer (p2, c1, k60, u'radix').
+1712975339: Client dummy_producer closed its connection.
+1712975383: Client fastapi_sensor_measures closed its connection.
+1712975383: mosquitto version 2.0.15 terminating
+1712975383: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712975398: mosquitto version 2.0.15 starting
+1712975398: Config loaded from /mosquitto/config/mosquitto.conf.
+1712975398: Opening ipv4 listen socket on port 1883.
+1712975398: Opening ipv6 listen socket on port 1883.
+1712975398: mosquitto version 2.0.15 running
+1712975401: New connection from 192.168.0.8:43065 on port 1883.
+1712975401: New client connected from 192.168.0.8:43065 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712975419: New connection from 192.168.0.1:52970 on port 1883.
+1712975420: Client <unknown> closed its connection.
+1712975420: New connection from 192.168.0.1:52974 on port 1883.
+1712975420: New client connected from 192.168.0.1:52974 as dummy_producer (p2, c1, k60, u'radix').
+1712975421: Client dummy_producer closed its connection.
+1712975421: New connection from 192.168.0.1:52984 on port 1883.
+1712975422: Client <unknown> closed its connection.
+1712975422: New connection from 192.168.0.1:52988 on port 1883.
+1712975422: New client connected from 192.168.0.1:52988 as dummy_producer (p2, c1, k60, u'radix').
+1712975457: Client dummy_producer disconnected.
+1712976828: Client fastapi_sensor_measures closed its connection.
+1712976829: mosquitto version 2.0.15 terminating
+1712976829: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712976956: mosquitto version 2.0.15 starting
+1712976956: Config loaded from /mosquitto/config/mosquitto.conf.
+1712976956: Opening ipv4 listen socket on port 1883.
+1712976956: Opening ipv6 listen socket on port 1883.
+1712976956: mosquitto version 2.0.15 running
+1712976957: New connection from 192.168.16.8:58533 on port 1883.
+1712976957: New client connected from 192.168.16.8:58533 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712976971: New connection from 192.168.16.1:54582 on port 1883.
+1712976972: Client <unknown> closed its connection.
+1712976972: New connection from 192.168.16.1:54590 on port 1883.
+1712976972: New client connected from 192.168.16.1:54590 as dummy_producer (p2, c1, k60, u'radix').
+1712976973: Client dummy_producer closed its connection.
+1712976973: New connection from 192.168.16.1:54596 on port 1883.
+1712976974: Client <unknown> closed its connection.
+1712976974: New connection from 192.168.16.1:54602 on port 1883.
+1712976974: New client connected from 192.168.16.1:54602 as dummy_producer (p2, c1, k60, u'radix').
+1712976982: Client dummy_producer closed its connection.
+1712977051: Client fastapi_sensor_measures has exceeded timeout, disconnecting.
+1712977097: New connection from 192.168.16.8:60871 on port 1883.
+1712977097: New client connected from 192.168.16.8:60871 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712977691: Client fastapi_sensor_measures closed its connection.
+1712977692: mosquitto version 2.0.15 terminating
+1712977692: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712982303: mosquitto version 2.0.15 starting
+1712982303: Config loaded from /mosquitto/config/mosquitto.conf.
+1712982303: Opening ipv4 listen socket on port 1883.
+1712982303: Opening ipv6 listen socket on port 1883.
+1712982303: mosquitto version 2.0.15 running
+1712982371: New connection from 192.168.32.8:60195 on port 1883.
+1712982371: New client connected from 192.168.32.8:60195 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712982436: New connection from 192.168.32.1:55576 on port 1883.
+1712982437: Client <unknown> closed its connection.
+1712982437: New connection from 192.168.32.1:55580 on port 1883.
+1712982437: New client connected from 192.168.32.1:55580 as dummy_producer (p2, c1, k60, u'radix').
+1712982438: Client dummy_producer closed its connection.
+1712982438: New connection from 192.168.32.1:55584 on port 1883.
+1712982439: Client <unknown> closed its connection.
+1712982439: New connection from 192.168.32.1:55592 on port 1883.
+1712982439: New client connected from 192.168.32.1:55592 as dummy_producer (p2, c1, k60, u'radix').
+1712982446: Client dummy_producer disconnected.
+1712982480: Client fastapi_sensor_measures closed its connection.
+1712982481: New connection from 192.168.32.8:33385 on port 1883.
+1712982481: New client connected from 192.168.32.8:33385 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712982489: New connection from 192.168.32.1:55648 on port 1883.
+1712982490: Client <unknown> closed its connection.
+1712982490: New connection from 192.168.32.1:55656 on port 1883.
+1712982490: New client connected from 192.168.32.1:55656 as dummy_producer (p2, c1, k60, u'radix').
+1712982491: Client dummy_producer closed its connection.
+1712982491: New connection from 192.168.32.1:55660 on port 1883.
+1712982492: Client <unknown> closed its connection.
+1712982492: New connection from 192.168.32.1:55664 on port 1883.
+1712982492: New client connected from 192.168.32.1:55664 as dummy_producer (p2, c1, k60, u'radix').
+1712983035: Client dummy_producer closed its connection.
+1712983043: Client fastapi_sensor_measures closed its connection.
+1712983044: New connection from 192.168.32.8:45607 on port 1883.
+1712983044: New client connected from 192.168.32.8:45607 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712983048: New connection from 192.168.32.1:56264 on port 1883.
+1712983049: Client <unknown> closed its connection.
+1712983049: New connection from 192.168.32.1:56272 on port 1883.
+1712983049: New client connected from 192.168.32.1:56272 as dummy_producer (p2, c1, k60, u'radix').
+1712983050: Client dummy_producer closed its connection.
+1712983050: New connection from 192.168.32.1:56276 on port 1883.
+1712983051: Client <unknown> closed its connection.
+1712983051: New connection from 192.168.32.1:56280 on port 1883.
+1712983051: New client connected from 192.168.32.1:56280 as dummy_producer (p2, c1, k60, u'radix').
+1712983100: Client dummy_producer disconnected.
+1712983106: Client fastapi_sensor_measures closed its connection.
+1712983107: mosquitto version 2.0.15 terminating
+1712983107: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712983127: mosquitto version 2.0.15 starting
+1712983127: Config loaded from /mosquitto/config/mosquitto.conf.
+1712983127: Opening ipv4 listen socket on port 1883.
+1712983127: Opening ipv6 listen socket on port 1883.
+1712983127: mosquitto version 2.0.15 running
+1712983129: New connection from 192.168.48.8:34805 on port 1883.
+1712983129: New client connected from 192.168.48.8:34805 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712983140: New connection from 192.168.48.1:56460 on port 1883.
+1712983141: Client <unknown> closed its connection.
+1712983141: New connection from 192.168.48.1:56476 on port 1883.
+1712983141: New client connected from 192.168.48.1:56476 as dummy_producer (p2, c1, k60, u'radix').
+1712983142: Client dummy_producer closed its connection.
+1712983142: New connection from 192.168.48.1:56488 on port 1883.
+1712983143: Client <unknown> closed its connection.
+1712983143: New connection from 192.168.48.1:56496 on port 1883.
+1712983143: New client connected from 192.168.48.1:56496 as dummy_producer (p2, c1, k60, u'radix').
+1712984705: Client dummy_producer disconnected.
+1712984927: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712984937: Client fastapi_sensor_measures closed its connection.
+1712984939: New connection from 192.168.48.8:54363 on port 1883.
+1712984939: New client connected from 192.168.48.8:54363 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712984945: New connection from 192.168.48.1:58280 on port 1883.
+1712984946: Client <unknown> closed its connection.
+1712984946: New connection from 192.168.48.1:58288 on port 1883.
+1712984946: New client connected from 192.168.48.1:58288 as dummy_producer (p2, c1, k60, u'radix').
+1712984947: Client dummy_producer closed its connection.
+1712984947: New connection from 192.168.48.1:58294 on port 1883.
+1712984948: Client <unknown> closed its connection.
+1712984948: New connection from 192.168.48.1:58298 on port 1883.
+1712984948: New client connected from 192.168.48.1:58298 as dummy_producer (p2, c1, k60, u'radix').
+1712986728: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712987670: Client dummy_producer closed its connection.
+1712987681: Client fastapi_sensor_measures closed its connection.
+1712987682: mosquitto version 2.0.15 terminating
+1712987682: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712987906: mosquitto version 2.0.15 starting
+1712987906: Config loaded from /mosquitto/config/mosquitto.conf.
+1712987906: Opening ipv4 listen socket on port 1883.
+1712987906: Opening ipv6 listen socket on port 1883.
+1712987906: mosquitto version 2.0.15 running
+1712987909: New connection from 192.168.80.9:59991 on port 1883.
+1712987909: New client connected from 192.168.80.9:59991 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712987915: New connection from 192.168.80.1:32832 on port 1883.
+1712987916: Client <unknown> closed its connection.
+1712987916: New connection from 192.168.80.1:32848 on port 1883.
+1712987916: New client connected from 192.168.80.1:32848 as dummy_producer (p2, c1, k60, u'radix').
+1712987917: Client dummy_producer closed its connection.
+1712987917: New connection from 192.168.80.1:32864 on port 1883.
+1712987918: Client <unknown> closed its connection.
+1712987918: New connection from 192.168.80.1:32874 on port 1883.
+1712987918: New client connected from 192.168.80.1:32874 as dummy_producer (p2, c1, k60, u'radix').
+1712988902: Client dummy_producer closed its connection.
+1712989030: New connection from 192.168.80.1:34106 on port 1883.
+1712989031: Client <unknown> closed its connection.
+1712989031: New connection from 192.168.80.1:34110 on port 1883.
+1712989031: New client connected from 192.168.80.1:34110 as dummy_producer (p2, c1, k60, u'radix').
+1712989032: Client dummy_producer closed its connection.
+1712989032: New connection from 192.168.80.1:34114 on port 1883.
+1712989033: Client <unknown> closed its connection.
+1712989033: New connection from 192.168.80.1:34118 on port 1883.
+1712989033: New client connected from 192.168.80.1:34118 as dummy_producer (p2, c1, k60, u'radix').
+1712989053: Client dummy_producer disconnected.
+1712989214: New connection from 192.168.80.1:34306 on port 1883.
+1712989215: Client <unknown> closed its connection.
+1712989215: New connection from 192.168.80.1:34310 on port 1883.
+1712989215: New client connected from 192.168.80.1:34310 as dummy_producer (p2, c1, k60, u'radix').
+1712989216: Client dummy_producer closed its connection.
+1712989216: New connection from 192.168.80.1:34314 on port 1883.
+1712989217: Client <unknown> closed its connection.
+1712989217: New connection from 192.168.80.1:34318 on port 1883.
+1712989217: New client connected from 192.168.80.1:34318 as dummy_producer (p2, c1, k60, u'radix').
+1712989576: Client dummy_producer closed its connection.
+1712989683: Client fastapi_sensor_measures closed its connection.
+1712989685: New connection from 192.168.80.9:39103 on port 1883.
+1712989685: New client connected from 192.168.80.9:39103 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712989698: New connection from 192.168.80.1:34826 on port 1883.
+1712989699: Client <unknown> closed its connection.
+1712989699: New connection from 192.168.80.1:34830 on port 1883.
+1712989699: New client connected from 192.168.80.1:34830 as dummy_producer (p2, c1, k60, u'radix').
+1712989700: Client dummy_producer closed its connection.
+1712989700: New connection from 192.168.80.1:34834 on port 1883.
+1712989701: Client <unknown> closed its connection.
+1712989701: New connection from 192.168.80.1:34842 on port 1883.
+1712989701: New client connected from 192.168.80.1:34842 as dummy_producer (p2, c1, k60, u'radix').
+1712989707: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712989747: Client dummy_producer disconnected.
+1712989778: Client fastapi_sensor_measures has exceeded timeout, disconnecting.
+1712989793: New connection from 192.168.80.9:46981 on port 1883.
+1712989793: New client connected from 192.168.80.9:46981 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712989800: New connection from 192.168.80.1:34954 on port 1883.
+1712989801: Client <unknown> closed its connection.
+1712989801: New connection from 192.168.80.1:34958 on port 1883.
+1712989801: New client connected from 192.168.80.1:34958 as dummy_producer (p2, c1, k60, u'radix').
+1712989802: Client dummy_producer closed its connection.
+1712989802: New connection from 192.168.80.1:34962 on port 1883.
+1712989803: Client <unknown> closed its connection.
+1712989803: New connection from 192.168.80.1:34970 on port 1883.
+1712989803: New client connected from 192.168.80.1:34970 as dummy_producer (p2, c1, k60, u'radix').
+1712989822: Client dummy_producer closed its connection.
+1712989828: Client fastapi_sensor_measures closed its connection.
+1712989830: New connection from 192.168.80.9:34597 on port 1883.
+1712989830: New client connected from 192.168.80.9:34597 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712989834: New connection from 192.168.80.1:35010 on port 1883.
+1712989835: Client <unknown> closed its connection.
+1712989835: New connection from 192.168.80.1:35014 on port 1883.
+1712989835: New client connected from 192.168.80.1:35014 as dummy_producer (p2, c1, k60, u'radix').
+1712989836: Client dummy_producer closed its connection.
+1712989836: New connection from 192.168.80.1:35018 on port 1883.
+1712989837: Client <unknown> closed its connection.
+1712989837: New connection from 192.168.80.1:35022 on port 1883.
+1712989837: New client connected from 192.168.80.1:35022 as dummy_producer (p2, c1, k60, u'radix').
+1712990276: Client dummy_producer closed its connection.
+1712990312: Client fastapi_sensor_measures closed its connection.
+1712990313: mosquitto version 2.0.15 terminating
+1712990313: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712990368: mosquitto version 2.0.15 starting
+1712990368: Config loaded from /mosquitto/config/mosquitto.conf.
+1712990368: Opening ipv4 listen socket on port 1883.
+1712990368: Opening ipv6 listen socket on port 1883.
+1712990368: mosquitto version 2.0.15 running
+1712990370: New connection from 192.168.96.8:43073 on port 1883.
+1712990370: New client connected from 192.168.96.8:43073 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712990448: New connection from 192.168.96.1:35842 on port 1883.
+1712990449: Client <unknown> closed its connection.
+1712990449: New connection from 192.168.96.1:35846 on port 1883.
+1712990449: New client connected from 192.168.96.1:35846 as dummy_producer (p2, c1, k60, u'radix').
+1712990450: Client dummy_producer closed its connection.
+1712990450: New connection from 192.168.96.1:35850 on port 1883.
+1712990451: Client <unknown> closed its connection.
+1712990451: New connection from 192.168.96.1:35858 on port 1883.
+1712990451: New client connected from 192.168.96.1:35858 as dummy_producer (p2, c1, k60, u'radix').
+1712992168: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712993969: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712995770: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712996228: Client dummy_producer disconnected.
+1712996333: Client fastapi_sensor_measures closed its connection.
+1712996334: mosquitto version 2.0.15 terminating
+1712996334: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1712996433: mosquitto version 2.0.15 starting
+1712996433: Config loaded from /mosquitto/config/mosquitto.conf.
+1712996433: Opening ipv4 listen socket on port 1883.
+1712996433: Opening ipv6 listen socket on port 1883.
+1712996433: mosquitto version 2.0.15 running
+1712996437: New connection from 192.168.112.9:32947 on port 1883.
+1712996437: New client connected from 192.168.112.9:32947 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1712998234: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713000035: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713001836: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713002183: Client fastapi_sensor_measures closed its connection.
+1713002184: mosquitto version 2.0.15 terminating
+1713002184: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713002220: mosquitto version 2.0.15 starting
+1713002220: Config loaded from /mosquitto/config/mosquitto.conf.
+1713002220: Opening ipv4 listen socket on port 1883.
+1713002220: Opening ipv6 listen socket on port 1883.
+1713002220: mosquitto version 2.0.15 running
+1713002223: New connection from 192.168.128.8:49831 on port 1883.
+1713002223: New client connected from 192.168.128.8:49831 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1713002840: New connection from 192.168.128.1:40328 on port 1883.
+1713002841: Client <unknown> closed its connection.
+1713002841: New connection from 192.168.128.1:40334 on port 1883.
+1713002841: New client connected from 192.168.128.1:40334 as dummy_producer (p2, c1, k60, u'radix').
+1713002842: Client dummy_producer closed its connection.
+1713002842: New connection from 192.168.128.1:40338 on port 1883.
+1713002843: Client <unknown> closed its connection.
+1713002843: New connection from 192.168.128.1:40346 on port 1883.
+1713002843: New client connected from 192.168.128.1:40346 as dummy_producer (p2, c1, k60, u'radix').
+1713002849: Client dummy_producer closed its connection.
+1713003312: New connection from 192.168.128.1:40836 on port 1883.
+1713003313: Client <unknown> closed its connection.
+1713003313: New connection from 192.168.128.1:40842 on port 1883.
+1713003313: New client connected from 192.168.128.1:40842 as dummy_producer (p2, c1, k60, u'radix').
+1713003314: Client dummy_producer closed its connection.
+1713003314: New connection from 192.168.128.1:40846 on port 1883.
+1713003315: Client <unknown> closed its connection.
+1713003315: New connection from 192.168.128.1:40854 on port 1883.
+1713003315: New client connected from 192.168.128.1:40854 as dummy_producer (p2, c1, k60, u'radix').
+1713004020: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713005821: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713007622: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713009423: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713010411: Client dummy_producer closed its connection.
+1713010415: New connection from 192.168.128.1:47912 on port 1883.
+1713010416: Client <unknown> closed its connection.
+1713010416: New connection from 192.168.128.1:47916 on port 1883.
+1713010416: New client connected from 192.168.128.1:47916 as dummy_producer (p2, c1, k60, u'radix').
+1713010417: Client dummy_producer closed its connection.
+1713010417: New connection from 192.168.128.1:47920 on port 1883.
+1713010418: Client <unknown> closed its connection.
+1713010418: New connection from 192.168.128.1:47926 on port 1883.
+1713010418: New client connected from 192.168.128.1:47926 as dummy_producer (p2, c1, k60, u'radix').
+1713011224: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713011243: Client dummy_producer closed its connection.
+1713012197: Client fastapi_sensor_measures closed its connection.
+1713012201: New connection from 192.168.128.10:32977 on port 1883.
+1713012201: New client connected from 192.168.128.10:32977 as fastapi_sensor_measures (p2, c1, k60, u'radix').
+1713012243: New connection from 192.168.128.1:49798 on port 1883.
+1713012244: Client <unknown> closed its connection.
+1713012244: New connection from 192.168.128.1:49802 on port 1883.
+1713012244: New client connected from 192.168.128.1:49802 as dummy_producer (p2, c1, k60, u'radix').
+1713012245: Client dummy_producer closed its connection.
+1713012245: New connection from 192.168.128.1:49806 on port 1883.
+1713012246: Client <unknown> closed its connection.
+1713012246: New connection from 192.168.128.1:49810 on port 1883.
+1713012246: New client connected from 192.168.128.1:49810 as dummy_producer (p2, c1, k60, u'radix').
+1713012270: Client dummy_producer disconnected.
+1713013025: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713014826: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713015030: New connection from 192.168.128.1:52852 on port 1883.
+1713015031: Client <unknown> closed its connection.
+1713015031: New connection from 192.168.128.1:52856 on port 1883.
+1713015031: New client connected from 192.168.128.1:52856 as dummy_producer (p2, c1, k60, u'radix').
+1713015032: Client dummy_producer closed its connection.
+1713015032: New connection from 192.168.128.1:52862 on port 1883.
+1713015033: Client <unknown> closed its connection.
+1713015033: New connection from 192.168.128.1:52870 on port 1883.
+1713015033: New client connected from 192.168.128.1:52870 as dummy_producer (p2, c1, k60, u'radix').
+1713015086: Client dummy_producer closed its connection.
+1713016627: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713018428: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713020229: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713022030: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713022692: New connection from 192.168.128.1:60640 on port 1883.
+1713022693: Client <unknown> closed its connection.
+1713022693: New connection from 192.168.128.1:60644 on port 1883.
+1713022693: New client connected from 192.168.128.1:60644 as dummy_producer (p2, c1, k60, u'radix').
+1713022694: Client dummy_producer closed its connection.
+1713022694: New connection from 192.168.128.1:60648 on port 1883.
+1713022695: Client <unknown> closed its connection.
+1713022695: New connection from 192.168.128.1:60656 on port 1883.
+1713022695: New client connected from 192.168.128.1:60656 as dummy_producer (p2, c1, k60, u'radix').
+1713022756: Client dummy_producer disconnected.
+1713023831: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713025632: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713027433: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713029234: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713031035: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713032836: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713034637: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713036438: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713038239: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713040040: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713041841: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713043642: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713045443: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713047244: Saving in-memory database to /mosquitto/data//mosquitto.db.

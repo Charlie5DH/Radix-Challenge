@@ -1,0 +1,267 @@
+version: "3"
+
+services:
+  ###############################################################################################################
+  #                                  KAFKA                                                                     #
+  ##############################################################################################################
+
+  input_service:
+    build:
+      context: ./input_service/
+      dockerfile: ./Dockerfile
+    container_name: input_service
+    command: "uvicorn main:app --host 0.0.0.0 --port 80"
+    depends_on:
+      - mosquitto
+      - kafka
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 9011:80
+    networks:
+      - services_network
+
+  kafka_to_influx:
+    build:
+      context: ./kafka_to_influx/
+      dockerfile: ./Dockerfile
+    container_name: kafka_to_influx
+    command: "python3 main.py"
+    depends_on:
+      - mosquitto
+      - influxdb
+      - kafka
+      - input_service
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - services_network
+
+  client_db:
+    container_name: "client_db"
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE=${SERVER_DB_NAME}
+      - MONGO_INITDB_USERNAME=${SERVER_DB_USERNAME}
+      - MONGO_INITDB_PASSWORD=${SERVER_DB_PASSWORD}
+    env_file:
+      - .env
+    volumes:
+      - ./data/client_db:/data/db
+    networks:
+      - services_network
+
+  sensor_checker:
+    build:
+      context: ./sensor_checker/
+      dockerfile: ./Dockerfile
+    container_name: sensor_checker
+    command: "python3 main.py"
+    depends_on:
+      - mosquitto
+      - influxdb
+      - kafka
+      - input_service
+      - client_db
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - services_network
+
+  client_server:
+    build:
+      context: ./client_server/
+      dockerfile: Dockerfile
+    container_name: client_server
+    command: "uvicorn main:app --host 0.0.0.0 --port 80"
+    depends_on:
+      - client_db
+      - influxdb
+    restart: always
+    ports:
+      - 9010:80
+    env_file:
+      - .env
+    networks:
+      - services_network
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    hostname: mosquitto
+    networks:
+      - services_network
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    restart: always
+    environment:
+      DOCKER_INFLUXDB_INIT_USERNAME: ${DOCKER_INFLUXDB_INIT_USERNAME}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${DOCKER_INFLUXDB_INIT_PASSWORD}
+      DOCKER_INFLUXDB_INIT_ORG: ${DOCKER_INFLUXDB_INIT_ORG}
+      DOCKER_INFLUXDB_INIT_BUCKET: ${DOCKER_INFLUXDB_TELEGRAF_BUCKET}
+      DOCKER_INFLUXDB_INIT_RETENTION: ${DOCKER_INFLUXDB_INIT_RETENTION}
+      DOCKER_INFLUX_TOKEN: ${DOCKER_INFLUX_TOKEN}
+      DOCKER_INFLUXDB_INIT_PORT: ${DOCKER_INFLUXDB_INIT_PORT}
+      DOCKER_INFLUXDB_INIT_HOST: ${DOCKER_INFLUXDB_INIT_HOST}
+      DOCKER_INFLUXDB_INIT_ADMIN_USER: ${DOCKER_INFLUXDB_INIT_ADMIN_USER}
+      DOCKER_INFLUXDB_INIT_ADMIN_PASSWORD: ${DOCKER_INFLUXDB_INIT_ADMIN_PASSWORD}
+    volumes:
+      - ./data/influxdb/infludb:/var/lib/influxdb
+      - ./data/influxdb/infludb2:/var/lib/influxdb2
+      - ./data/influxdb/influxdb2-config:/etc/influxdb2
+    ports:
+      - "${DOCKER_INFLUXDB_INIT_PORT}:8086"
+    env_file:
+      - .env
+    networks:
+      - services_network
+
+  telegraf:
+    image: telegraf:latest
+    container_name: telegraf
+    links:
+      - influxdb
+    volumes:
+      - ${TELEGRAF_CFG_PATH}:/etc/telegraf/telegraf.conf:rw
+    env_file:
+      - .env
+    restart: always
+    depends_on:
+      - influxdb
+      - kafka
+      - kafka_1
+      - zookeeper
+    networks:
+      - services_network
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    hostname: zookeeper
+    healthcheck:
+      test: echo srvr | nc zookeeper 2181 || exit 1
+      retries: 20
+      interval: 10s
+    networks:
+      - services_network
+    restart: always
+    env_file:
+      - .env
+    environment:
+      ZOOKEEPER_CLIENT_PORT: ${ZOOKEEPER_CLIENT_PORT}
+      ZOOKEEPER_TICK_TIME: ${ZOOKEEPER_TICK_TIME}
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: ${KAFKA_HOST}
+    networks:
+      - services_network
+    ports:
+      - 29092:29092
+      - 9997:9997
+    depends_on:
+      - zookeeper
+    healthcheck:
+      test: nc -z localhost 9092 || exit -1
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    restart: always
+    volumes:
+      - "./kafka/config:/etc/kafka/config"
+    environment:
+      KAFKA_BROKER_ID: ${KAFKA_BROKER_ID}
+      KAFKA_ZOOKEEPER_CONNECT: ${ZOOKEEPER_HOST}:${ZOOKEEPER_CLIENT_PORT}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${KAFKA_HOST}:${KAFKA_PORT},PLAINTEXT_HOST://localhost:${KAFKA_ADVERTISED_PORT}
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_ADVERTISED_HOST_NAME: ${KAFKA_HOST}
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 2
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 2
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      JMX_PORT: 9997
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      CONFLUENT_METRICS_ENABLE: "true"
+      CONFLUENT_SUPPORT_CUSTOMER_ID: "anonymous"
+      DELETE_RETENTION_MS: 86400000
+      KAFKA_JMX_OPTS: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka0 -Dcom.sun.management.jmxremote.rmi.port=9997
+
+  kafka_1:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka_1
+    networks:
+      - services_network
+    ports:
+      - 29093:29092
+      - 9998:9998
+    depends_on:
+      - zookeeper
+    healthcheck:
+      test: nc -z localhost 9092 || exit -1
+      interval: 5s
+      timeout: 10s
+      retries: 10
+    restart: always
+    volumes:
+      - "./kafka/config:/etc/kafka/config"
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: ${ZOOKEEPER_HOST}:${ZOOKEEPER_CLIENT_PORT}
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_ADVERTISED_HOST_NAME: kafka_1
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka_1:${KAFKA_PORT},PLAINTEXT_HOST://localhost:29093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 2
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 2
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 2
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      JMX_PORT: 9998
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      CONFLUENT_METRICS_ENABLE: "true"
+      CONFLUENT_SUPPORT_CUSTOMER_ID: "anonymous"
+      DELETE_RETENTION_MS: 86400000
+      KAFKA_JMX_OPTS: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka0 -Dcom.sun.management.jmxremote.rmi.port=9998
+
+  kafka-ui:
+    container_name: kafka-ui
+    image: provectuslabs/kafka-ui:latest
+    ports:
+      - 8090:8080
+    networks:
+      - services_network
+    depends_on:
+      - zookeeper
+      - kafka
+    environment:
+      KAFKA_CLUSTERS_0_NAME: cluster_0
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: ${KAFKA_HOST}:${KAFKA_PORT}
+      KAFKA_CLUSTERS_0_ZOOKEEPER: ${ZOOKEEPER_HOST}:${ZOOKEEPER_CLIENT_PORT}
+      KAFKA_CLUSTERS_0_METRICS_PORT: 9997
+      KAFKA_CLUSTERS_0_METRICS_TYPE: JMX
+      KAFKA_CLUSTERS_1_NAME: cluster_1
+      KAFKA_CLUSTERS_1_BOOTSTRAPSERVERS: kafka_1:${KAFKA_PORT}
+      KAFKA_CLUSTERS_1_ZOOKEEPER: ${ZOOKEEPER_HOST}:${ZOOKEEPER_CLIENT_PORT}
+      KAFKA_CLUSTERS_1_METRICS_PORT: 9998
+      KAFKA_CLUSTERS_1_METRICS_TYPE: JMX
+
+networks:
+  services_network:
+    driver: bridge

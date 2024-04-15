@@ -1,0 +1,11 @@
+fastapi
+pymongo
+python-dateutil
+pydantic
+uvicorn
+requests
+confluent_kafka
+influxdb_client[async]
+pandas
+numpy
+python-multipart

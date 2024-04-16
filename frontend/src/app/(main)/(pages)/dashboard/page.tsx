@@ -18,15 +18,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import FileUploadComponent from "./_components/FileUploadComponent";
+import { useToast } from "@/components/ui/use-toast";
 
 const Dashboard = (props: {}) => {
-  const [range, setRange] = React.useState<DateOption>(dateOptions[0]);
+  const [range, setRange] = React.useState<DateOption>(dateOptions[2]);
   const [devices, setDevices] = React.useState<Device[]>([]);
   const [selectedDevices, setSelectedDevices] = React.useState<Device[] | []>([]);
   const [measures, setMeasures] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [maxValue, setMaxValue] = React.useState<number>(0);
   const [minValue, setMinValue] = React.useState<number>(0);
+  const { toast } = useToast();
   const [aggWindow, setAggWindow] = React.useState<AggWindow>({ label: "10 minutes", value: "10m" });
 
   React.useEffect(() => {
@@ -40,11 +42,14 @@ const Dashboard = (props: {}) => {
   React.useEffect(() => {
     if (devices.length > 0) {
       setSelectedDevices([devices[0]]);
+      const init_timestamp = new Date();
+      init_timestamp.setDate(init_timestamp.getDate() - range.query);
+      const end_timestamp = new Date();
 
       fetchSensorData({
         equipment_ids: devices[0].equipmentId,
-        init_timestamp: new Date(new Date().setDate(new Date().getDate() - 7)).toISOString(),
-        end_timestamp: new Date().toISOString(),
+        init_timestamp: init_timestamp.toISOString(),
+        end_timestamp: end_timestamp.toISOString(),
         aggregation_window: "10m",
       }).then((data) => {
         const measures = data.reduce((acc: { [key: string]: any }, measure) => {
@@ -69,18 +74,42 @@ const Dashboard = (props: {}) => {
       init_timestamp: init_timestamp.toISOString(),
       end_timestamp: end_timestamp.toISOString(),
       aggregation_window: aggWindow.value,
-    }).then((data) => {
-      const measures = data.reduce((acc: { [key: string]: any }, measure) => {
-        acc[measure.time] = { time: measure.time, [measure.equipment_id]: measure.value };
-        return acc;
-      }, {});
-      setMeasures(Object.values(measures));
+    })
+      .then((data) => {
+        const measures = data.reduce((acc: { [key: string]: any }, measure) => {
+          acc[measure.time] = { time: measure.time, [measure.equipment_id]: measure.value };
+          return acc;
+        }, {});
+        setMeasures(Object.values(measures));
 
-      const values = data.map((measure) => measure.value).filter((value) => value !== null && value !== "null");
-      setMaxValue(Number(Math.max(...values.map(Number)).toFixed(2)));
-      setMinValue(Number(Math.min(...values.map(Number)).toFixed(2)));
-    });
+        toast({
+          title: "Data refreshed",
+          description: `Data has been refreshed for the ${range.label}. Measures loaded: ${data.length}`,
+        });
+
+        const values = data.map((measure) => measure.value).filter((value) => value !== null && value !== "null");
+        if (values.length === 0) {
+          setMaxValue(0);
+          setMinValue(0);
+          return;
+        }
+        setMaxValue(Number(Math.max(...values.map(Number)).toFixed(2)));
+        setMinValue(Number(Math.min(...values.map(Number)).toFixed(2)));
+      })
+      .catch((error) => {
+        toast({
+          title: "Failed to refresh data",
+          description: "An error occurred while refreshing the data",
+          variant: "destructive",
+        });
+      });
   };
+
+  React.useEffect(() => {
+    if (selectedDevices.length > 0) {
+      handleRefresh();
+    }
+  }, [selectedDevices, range, aggWindow]);
 
   return (
     <div className="flex flex-col gap-4 relative">
@@ -127,7 +156,7 @@ const Dashboard = (props: {}) => {
             content={`We have ${devices.length} sensors in the field that are currently active`}
           />
           <DasboardCard
-            title={minValue.toString()}
+            title={minValue.toString() || "0"}
             subtitle={"For an accepted min of 46. "}
             description="Minimum value"
             content={`A minimum of 0 indicates a sensor failure.`}

@@ -6,7 +6,7 @@ import { AreaChart } from "@tremor/react";
 import CircleProgress from "@/components/dashboard/CircleProgress";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { AggWindow, DateOption, Device } from "@/types/types";
-import { dateOptions, formSchema } from "@/constants";
+import { dateOptions } from "@/constants";
 import DateRangePickerFixed from "@/components/shared/DateRangePickerFixed";
 import { Button } from "@/components/ui/button";
 import SensorPicker from "./_components/SensorPicker";
@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import FileUploadComponent from "./_components/FileUploadComponent";
 
 const Dashboard = (props: {}) => {
   const [range, setRange] = React.useState<DateOption>(dateOptions[0]);
@@ -27,12 +28,6 @@ const Dashboard = (props: {}) => {
   const [maxValue, setMaxValue] = React.useState<number>(0);
   const [minValue, setMinValue] = React.useState<number>(0);
   const [aggWindow, setAggWindow] = React.useState<AggWindow>({ label: "10 minutes", value: "10m" });
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-  });
-
-  const fileRef = form.register("file");
 
   React.useEffect(() => {
     setLoading(true);
@@ -87,41 +82,13 @@ const Dashboard = (props: {}) => {
     });
   };
 
-  const handleSumbit = (data: z.infer<typeof formSchema>) => {
-    // upload file action
-    if (!data.file) return;
-    uploadFile(data.file[0]).then(() => {
-      handleRefresh();
-    });
-  };
-
   return (
     <div className="flex flex-col gap-4 relative">
       <div className="sticky top-0 z-[10] px-5 py-3 bg-background/50 backdrop-blur-lg flex flex-col border-b">
         <div className="flex flex-wrap items-center justify-between w-full">
           <h1 className="text-3xl font-bold ">Dashboard</h1>
           <div className="flex items-center gap-2 mx-4">
-            <div className="flex w-full max-w-sm items-center space-x-2">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(handleSumbit)} className="flex w-full items-center gap-2">
-                  <FormField
-                    control={form.control}
-                    name="file"
-                    render={({ field }) => {
-                      return (
-                        <FormItem>
-                          <FormControl>
-                            <Input type="file" placeholder="shadcn" {...fileRef} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      );
-                    }}
-                  />
-                  <Button type="submit">Submit</Button>
-                </form>
-              </Form>
-            </div>
+            <FileUploadComponent />
             <DateRangePickerFixed range={range} setRange={setRange} />
             <AggWindowPicker aggWindow={aggWindow} setAggWindow={setAggWindow} />
             <SensorPicker devices={devices} selectedDevices={selectedDevices} setSelectedDevices={setSelectedDevices} />

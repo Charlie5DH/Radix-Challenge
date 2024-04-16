@@ -18,7 +18,6 @@ export const typeWriterHeader = [
 export const sideBarOptions = [
   { name: "Dashboard", Component: LayoutDashboard, href: "/dashboard" },
   { name: "Devices", Component: Box, href: "/devices" },
-  { name: "Settings", Component: Settings, href: "/settings" },
 ];
 
 export const dateOptions: { label: string; value: string; query: number; agg_window: string }[] = [
@@ -37,7 +36,3 @@ export const aggWindows: AggWindow[] = [
   { label: "12 hours", value: "12h" },
   { label: "1 day", value: "1d" },
 ];
-
-export const formSchema = z.object({
-  file: z.instanceof(FileList).optional(),
-});

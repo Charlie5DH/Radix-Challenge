@@ -2,10 +2,19 @@
 import { Device } from "@/types/types";
 import React from "react";
 import DevicesTable from "./_components/DevicesTable";
-import { devicesSample } from "@/constants";
+import { fetchSensors } from "@/actions/actions";
 
 const DevicesPage = () => {
-  const [devices, setDevices] = React.useState<Device[]>(devicesSample);
+  const [devices, setDevices] = React.useState<Device[]>([]);
+  const [loading, setLoading] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setLoading(true);
+    fetchSensors().then((data) => {
+      setDevices(data);
+    });
+    setLoading(false);
+  }, []);
 
   return (
     <div className="flex flex-col gap-4">

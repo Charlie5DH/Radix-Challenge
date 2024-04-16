@@ -60,20 +60,6 @@ const columns: ColumnDef<Device>[] = [
     ),
   },
   {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <div className="flex items-center gap-2 capitalize">
-        {row.getValue("status") === "active" ? (
-          <CheckCircle2 className="text-teal-600 w-4 h-4" />
-        ) : (
-          <AlertCircle className="text-orange-600 w-4 h-4" />
-        )}
-        <span>{row.getValue("status")}</span>
-      </div>
-    ),
-  },
-  {
     accessorKey: "type",
     header: () => <div className="text-right">Type</div>,
     cell: ({ row }) => {
@@ -83,14 +69,14 @@ const columns: ColumnDef<Device>[] = [
     enableHiding: true,
   },
   {
-    accessorKey: "lastConnection",
-    header: () => <div className="text-right">Last Conection</div>,
+    accessorKey: "createdAt",
+    header: () => <div className="text-right">Created At</div>,
     cell: ({ row }) => {
       return (
         <div className="text-right">
           {
             // if the value is a Date object, format it as a string
-            typeof row.getValue("lastConnection") === "object"
+            typeof row.getValue("createdAt") === "object"
               ? new Intl.DateTimeFormat("en-US", {
                   year: "numeric",
                   month: "short",
@@ -98,8 +84,8 @@ const columns: ColumnDef<Device>[] = [
                   hour: "numeric",
                   minute: "numeric",
                   second: "numeric",
-                }).format(row.getValue("lastConnection"))
-              : row.getValue("lastConnection")
+                }).format(row.getValue("createdAt"))
+              : row.getValue("createdAt")
           }
         </div>
       );
